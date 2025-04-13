@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Reply Generator</title>
+
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@700&family=Playfair+Display:wght@400;700&display=swap"
+	rel="stylesheet">
+
+<!-- Font Awesome -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+	rel="stylesheet">
+
+<!-- Animate.css -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- Style css -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="bg-bubble"></div>
+	<div class="bg-bubble"></div>
+	<div class="bg-bubble"></div>
+	<div class="bg-bubble"></div>
+
+	<img id="logo" src="img/Logo.png" alt="Logo"
+		class="animate__animated animate__fadeInDown">
+
+	<div class="success-message" id="successMessage">
+		<i class="fas fa-check-circle"></i> Reply copied to clipboard!
+	</div>
+
+	<div class="email-container animate__animated animate__fadeIn">
+		<h2>Email Reply Generator</h2>
+
+		<div class="input-container">
+			<label for="emailContent">Email Content:</label>
+			<textarea id="emailContent"
+				placeholder="Paste the original email here..."></textarea>
+			<i class="fas fa-envelope"></i>
+		</div>
+
+		<div class="input-container">
+			<label for="tone">Select Tone:</label> <select id="tone">
+				<option value="friendly">Friendly 😊</option>
+				<option value="professional">Professional 👔</option>
+				<option value="formal">Formal 🎩</option>
+				<option value="grateful">Grateful 🙏</option>
+				<option value="apologetic">Apologetic 😔</option>
+				<option value="enthusiastic">Enthusiastic 🎉</option>
+				<option value="sympathetic">Sympathetic 🤗</option>
+				<option value="urgent">Urgent ⏰</option>
+				<option value="casual">Casual 😎</option>
+				<option value="sales">Sales 💰</option>
+				<option value="technical">Technical 🖥️</option>
+				<option value="follow-up">Follow-up 🔄</option>
+			</select> <i class="fas fa-comment-alt"></i>
+		</div>
+
+		<button onclick="generateEmailReply()">
+			<i class="fas fa-paper-plane"></i> Generate Reply
+		</button>
+
+		<div class="loader" id="loader"></div>
+
+		<div id="reply"></div>
+
+		<button id="copyBtn" onclick="copyToClipboard()">
+			<i class="fas fa-copy"></i> Copy to Clipboard
+		</button>
+	</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
